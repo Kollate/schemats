@@ -1,10 +1,11 @@
 /* tslint:disable */
 
+import { EmailAddress } from '../../fixture/types';
 export type format_enum = 'html' | 'markdown' | 'text';
 export type user_status_enum = 'active' | 'confirmed' | 'deleted' | 'pending' | 'suspended';
 
 export namespace usersFields {
-    export type email = string;
+    export type email = EmailAddress;
     export type id = number;
     export type pass_crypt = string;
     export type creation_time = Date;

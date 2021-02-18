@@ -1,5 +1,5 @@
 {
-  "name": "schemats",
+  "name": "@kollate/schemats",
   "version": "3.0.3",
   "description": "Generate typescript interface definitions from (postgres) SQL database schema",
   "keywords": [
@@ -11,10 +11,9 @@
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
   "scripts": {
-    "lint": "tslint --project tsconfig.json --type-check 'src/**/*.ts' 'test/**/*.test.ts' 'bin/**/*.ts' --exclude '**/*.d.ts'",
     "build": "tsc",
     "dependency-check": "dependency-check . --entry bin/schemats.js --missing --no-dev",
-    "test": "npm run lint && npm run build && npm run dependency-check && mocha",
+    "test": "npm run build && npm run depcode ~endency-check && mocha",
     "prepublish": "npm run build",
     "clean": "del-cli node_modules **/*.js",
     "coverage": "npm run lint && npm run build && npm run dependency-check && nyc mocha",
@@ -44,7 +43,7 @@
     "@types/mocha": "^2.2.39",
     "@types/mysql": "0.0.33",
     "@types/mz": "^0.0.31",
-    "@types/node": "^6.0.77",
+    "@types/node": "^14.14.28",
     "@types/power-assert": "^1.4.29",
     "@types/proxyquire": "^1.3.27",
     "@types/sinon": "^2.1.2",
@@ -70,7 +69,7 @@
     "mysql": "^2.13.0",
     "mz": "^2.6.0",
     "pg-promise": "^6.3.6",
-    "typescript": "^2.7.1",
+    "typescript": "^4.1.5",
     "typescript-formatter": "^7.0.1",
     "yargs": "^8.0.1"
   },

@@ -1,5 +1,10 @@
 {
-    "tables": ["users"],
-    "schema": null,
-    "writeHeader": false
+  "tables": ["users"],
+  "schema": null,
+  "writeHeader": false,
+  "customTypes": {
+    "users": {
+      "email": "../../fixture/types#EmailAddress"
+    }
+  }
 }
