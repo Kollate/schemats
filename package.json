@@ -13,7 +13,7 @@
   "scripts": {
     "build": "tsc",
     "dependency-check": "dependency-check . --entry bin/schemats.js --missing --no-dev",
-    "test": "npm run build && npm run depcode ~endency-check && mocha",
+    "test": "npm run build && npm run dependency-check && mocha",
     "prepublish": "npm run build",
     "clean": "del-cli node_modules **/*.js",
     "coverage": "npm run lint && npm run build && npm run dependency-check && nyc mocha",
