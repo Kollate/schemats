@@ -62,7 +62,9 @@ function buildHeader(
             }, {} as { [key: string]: string[] });
         customImports = Object.entries(filenameTypesMap)
             .map(([filename, types]: [string, string[]]) => {
-                return `import { ${types.join(", ")} } from '${filename}';`;
+                return `import { ${Array.from(new Set(types)).join(
+                    ", "
+                )} } from '${filename}';`;
             })
             .join("\n");
     }
